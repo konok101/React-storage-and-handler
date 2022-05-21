@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Cosmatic from '../Cosmatic/Cosmatic';
+import './cosmatics.css'
 
 const Cosmatics = () => {
     const [Cosmatics, setCosmatics]= useState([])
@@ -12,12 +13,16 @@ const Cosmatics = () => {
 
     }, [])
     return (
-        <div>
-            <h1>Welcome to data server</h1>
-            {
-                Cosmatics.map(cosmatic => <Cosmatic cosmatic={cosmatic}></Cosmatic>)
-            }
-        </div>
+        
+       <div>
+              <h1>Welcome to data server</h1>
+             <div className='cosmatics'>
+          
+          {
+              Cosmatics.map(cosmatic => <Cosmatic cosmatic={cosmatic}></Cosmatic>)
+          }
+      </div>
+       </div>
     );
 };
 
